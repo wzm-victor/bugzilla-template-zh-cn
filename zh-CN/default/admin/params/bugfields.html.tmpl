@@ -1,0 +1,40 @@
+[%# This Source Code Form is subject to the terms of the Mozilla Public
+  # License, v. 2.0. If a copy of the MPL was not distributed with this
+  # file, You can obtain one at http://mozilla.org/MPL/2.0/.
+  #
+  # This Source Code Form is "Incompatible With Secondary Licenses", as
+  # defined by the Mozilla Public License, v. 2.0.
+  #%]
+
+[%
+   title = "$terms.Bug 字段"
+   desc = "选择你想要显示的字段"
+%]
+
+[% param_descs = {
+  useclassification => "若设为「开」， Bugzilla 将把每个项目归到一个分类中。" _
+                       "但是你必须将 editclassification 参数设为「开」，才能够编辑分类。",
+
+  usetargetmilestone => "你是否希望使用目标里程碑字段？",
+
+  useqacontact => "你是否希望使用 QA 联系人字段？",
+
+  usestatuswhiteboard => "你是否希望使用状态白板字段？",
+
+  use_see_also => "你是否希望使用「也请参考」字段？" _
+    "它可以让你参照到其他 Bugzilla 上的 $terms.bugs 。" _
+    "即使你停用此字段， 在 $terms.bug 中已设置为有关连的其他 $terms.bugs 的网址仍会出现，亦可被删除。",
+
+  defaultpriority => "这是新输入的 $terms.bugs 的默认优先程度。",
+
+  defaultseverity => "这是新输入的 $terms.bugs 的默认严重等级。",
+
+  defaultplatform => "这是在反馈 $terms.bug 时，预先选择的硬件平台。<br>" _
+                     "若留白，则 Bugzilla 会使用浏览器反馈的值做为平台预先选择的值。",
+
+  defaultopsys => "这是在反馈 $terms.bug 时，预先选择的操作系统。<br>" _
+                  "若留白，则 Bugzilla 会使用浏览器反馈的值做为操作系统预先选择的值。",
+  collapsed_comment_tags => "以半角逗号 (,) 分隔的标签清单。" _
+                            "此清单将套用于意见字段中，当意见内容符合标签时，该意见会默认为折叠",
+}
+%]
